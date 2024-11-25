@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-api-service
+  namespace: product
+spec:
+  type: ClusterIP
+  selector:
+    app: product-api
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: zmq-pub
+      protocol: TCP
+      port: 5555
+      targetPort: 5555
+    - name: zmq-sub
+      protocol: TCP
+      port: 5556
+      targetPort: 5556

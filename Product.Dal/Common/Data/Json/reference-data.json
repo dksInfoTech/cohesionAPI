@@ -1,0 +1,1577 @@
+{
+  "CounterpartyCreditRating": [
+    "AAA",
+    "AAA+",
+    "AAA-",
+    "AA",
+    "AA+",
+    "AA-",
+    "BBB",
+    "BBB+",
+    "BBB-",
+    "CCC",
+    "CCC+",
+    "CCC-",
+    "NA"
+  ],
+  "ClientSegment": [
+    "CORPORATE",
+    "BANKS",
+    "Multinational",
+    "CONSUMER & SERVICES",
+    "GOVERNMENT, EDUCATION & DEFENCE",
+    "DIVERSIFIED INDUSTRIALS",
+    "FOOD, BEVERAGE & AGRI",
+    "TELECOMM, MEDIA, ENTERTAINMENT & TECH",
+    "TRANSPORT & LOGISTICS",
+    "OIL AND GAS",
+    "RESOURCE OTHERS",
+    "UTILITIES & INFRASTRUCTURE"
+  ],
+  "Delegationauthority": [
+    "Not Applicable",
+    "CRO",
+    "Head of business",
+    "Head of segment",
+    "Head of relationship"
+  ],
+  "EntityType": [
+    "Group",
+    "Legal Entity",
+    "Subsidiary"
+  ],
+  "Location": [
+    "Australia",
+    "American Samoa",
+    "Cambodia",
+    "China",
+    "Cook Islands",
+    "Fiji",
+    "France",
+    "Germany",
+    "Guam",
+    "Hong Kong",
+    "India",
+    "Indonesia",
+    "Japan",
+    "Kiribati",
+    "Laos",
+    "Malaysia",
+    "Myanmar",
+    "New Caledonia",
+    "New Zealand",
+    "Papua New Guinea",
+    "Philippines",
+    "Samoa",
+    "Singapore",
+    "Solomon Islands",
+    "South Korea",
+    "Taiwan",
+    "Thailand",
+    "Timor-Leste",
+    "Tonga",
+    "United Arab Emirates",
+    "United Kingdom",
+    "United States",
+    "Vanuatu",
+    "Vietnam"
+  ],
+  "Country": [
+    "Australia",
+    "American Samoa",
+    "Cambodia",
+    "China",
+    "Cook Islands",
+    "Fiji",
+    "France",
+    "Germany",
+    "Guam",
+    "Hong Kong",
+    "India",
+    "Indonesia",
+    "Japan",
+    "Kiribati",
+    "Laos",
+    "Malaysia",
+    "Myanmar",
+    "New Caledonia",
+    "New Zealand",
+    "Papua New Guinea",
+    "Philippines",
+    "Samoa",
+    "Singapore",
+    "Solomon Islands",
+    "South Korea",
+    "Taiwan",
+    "Thailand",
+    "Timor-Leste",
+    "Tonga",
+    "United Arab Emirates",
+    "United Kingdom",
+    "United States",
+    "Vanuatu",
+    "Vietnam"
+  ],
+  "HighRiskStatus": [
+    "At risk",
+    "Watch",
+    "Shadow",
+    "Advisory",
+    "Control",
+    "N/A"
+  ],
+  "BusinessUnit": [
+    "Wholesale banking",
+    "Wealth management",
+    "Retail banking"
+  ],
+  "ControlType": [
+    "text",
+    "dropdown",
+    "checkbox",
+    "richtext",
+    "datetime",
+    "toggle"
+  ],
+  "Priority": [
+    "Urgent",
+    "High",
+    "Medium",
+    "Low"
+  ],
+  "RecallReasons": [
+    "Rework requested by CO",
+    "Dulplicate proposal",
+    "Invalid proposal",
+    "Others"
+  ],
+  "SectionCategory": [
+    "Proposal",
+    "Client"
+  ],
+  "Group": [
+    {
+      "key": "Client",
+      "value": [
+        "About",
+        "Rating information",
+        "Summary",
+        "Financial analysis",
+        "Business summary",
+        "Corporate structure",
+        "Insights on board",
+        "Industry analysis",
+        "Key risks mitigants",
+        "Account strategy",
+        "Risk appetite",
+        "Pricing details",
+        "ESG",
+        "Risk grade",
+        "Covenants",
+        "Limits",
+        "Timebands"
+      ]
+    },
+    {
+      "key": "Proposal",
+      "value": [ "About", "Decision rationale", "Pending tasks", "Team members" ]
+    },
+    {
+      "key": "Facility",
+      "value": [ "Facility documents", "Interchangeable limits", "Details", "Migration information", "Timeband", "LST" ]
+    }
+  ],
+  "PortfolioMetrics": [
+    {
+      "key": "CR_TOTAL_REV",
+      "value": {
+        "name": "Revenue Growth",
+        "unit": "%",
+        "red": "",
+        "amber": "",
+        "green": ""
+      }
+    },
+    {
+      "key": "CR_EBITDA_MARGIN",
+      "value": {
+        "name": "EBITDA Margin",
+        "unit": "%",
+        "red": "",
+        "amber": "",
+        "green": ""
+      }
+    },
+    {
+      "key": "CR_DEBT_TO_EBITDA",
+      "value": {
+        "name": "Debt to EBITDA",
+        "unit": "x",
+        "red": "",
+        "amber": "",
+        "green": ""
+      }
+    },
+    {
+      "key": "CR_DEBT_TO_CAPITAL",
+      "value": {
+        "name": "Debt to Capital",
+        "unit": "%",
+        "red": "",
+        "amber": "",
+        "green": ""
+      }
+    },
+    {
+      "key": "CR_EBITDA_INTEREST_COVER",
+      "value": {
+        "name": "EBITDA Interest Coverage",
+        "unit": "x",
+        "red": "",
+        "amber": "",
+        "green": ""
+      }
+    }
+  ],
+  "Product": [
+    "Money Market",
+    "LOAN",
+    "Derivative",
+    "FXSwap",
+    "Currency Loan",
+    "Term Loan",
+    "Trade Unfunded ",
+    "Unfunded Trade"
+  ],
+  "LimitTenor": [
+    {
+      "Tenor": "today",
+      "Limit": ""
+    },
+    {
+      "Tenor": "day",
+      "Limit": "1"
+    },
+    {
+      "Tenor": "week",
+      "Limit": "1"
+    },
+    {
+      "Tenor": "month",
+      "Limit": "1"
+    },
+    {
+      "Tenor": "year",
+      "Limit": "1"
+    },
+    {
+      "Tenor": "year",
+      "Limit": "5"
+    },
+    {
+      "Tenor": "year",
+      "Limit": "10"
+    },
+    {
+      "Tenor": "forever",
+      "Limit": ""
+    }
+  ],
+  "ProductLimitTenor": [
+    {
+      "Product": "Treasury / Money Market",
+      "LimitTenor": [
+        {
+          "key": "",
+          "value": "today",
+          "name": " today"
+        },
+        {
+          "key": "1",
+          "value": "day",
+          "name": "1 day"
+        },
+        {
+          "key": "1",
+          "value": "week",
+          "name": "1 week"
+        },
+        {
+          "key": "1",
+          "value": "month",
+          "name": "1 month"
+        },
+        {
+          "key": "1",
+          "value": "year",
+          "name": "1 year"
+        },
+        {
+          "key": "10",
+          "value": "year",
+          "name": "10 year"
+        },
+        {
+          "key": "",
+          "value": "forever",
+          "name": " forever"
+        }
+      ]
+    },
+    {
+      "Product": "Not classified (Not a product)",
+      "LimitTenor": [
+        {
+          "key": "",
+          "value": "today",
+          "name": " today"
+        },
+        {
+          "key": "1",
+          "value": "week",
+          "name": "1 week"
+        },
+        {
+          "key": "1",
+          "value": "month",
+          "name": "1 month"
+        },
+        {
+          "key": "1",
+          "value": "year",
+          "name": "1 year"
+        },
+        {
+          "key": "5",
+          "value": "year",
+          "name": "5 year"
+        },
+        {
+          "key": "10",
+          "value": "year",
+          "name": "10 year"
+        },
+        {
+          "key": "",
+          "value": "forever",
+          "name": " forever"
+        }
+      ]
+    },
+    {
+      "Product": "Derivative Instrument",
+      "LimitTenor": [
+        {
+          "key": "1",
+          "value": "day",
+          "name": "1 day"
+        },
+        {
+          "key": "1",
+          "value": "week",
+          "name": "1 week"
+        },
+        {
+          "key": "1",
+          "value": "month",
+          "name": "1 month"
+        },
+        {
+          "key": "1",
+          "value": "year",
+          "name": "1 year"
+        },
+        {
+          "key": "5",
+          "value": "year",
+          "name": "5 year"
+        },
+        {
+          "key": "10",
+          "value": "year",
+          "name": "10 year"
+        }
+      ]
+    },
+    {
+      "Product": "Credit Default Swap",
+      "LimitTenor": [
+        {
+          "key": "",
+          "value": "today",
+          "name": " today"
+        },
+        {
+          "key": "1",
+          "value": "week",
+          "name": "1 week"
+        },
+        {
+          "key": "1",
+          "value": "year",
+          "name": "1 year"
+        },
+        {
+          "key": "5",
+          "value": "year",
+          "name": "5 year"
+        },
+        {
+          "key": "",
+          "value": "forever",
+          "name": " forever"
+        }
+      ]
+    },
+    {
+      "Product": "Foreign Currency Loan",
+      "LimitTenor": [
+        {
+          "key": "",
+          "value": "today",
+          "name": " today"
+        },
+        {
+          "key": "1",
+          "value": "day",
+          "name": "1 day"
+        }
+      ]
+    },
+    {
+      "Product": "Payment/Settlement",
+      "LimitTenor": [
+        {
+          "key": "",
+          "value": "today",
+          "name": " today"
+        },
+        {
+          "key": "1",
+          "value": "week",
+          "name": "1 week"
+        },
+        {
+          "key": "1",
+          "value": "year",
+          "name": "1 year"
+        },
+        {
+          "key": "10",
+          "value": "year",
+          "name": "10 year"
+        },
+        {
+          "key": "",
+          "value": "forever",
+          "name": " forever"
+        }
+      ]
+    }
+  ],
+  "RiskGrade": [
+    "0+",
+    "1+",
+    "1=",
+    "1-",
+    "2+",
+    "2=",
+    "2-",
+    "3+",
+    "3=",
+    "3-",
+    "4+",
+    "4=",
+    "4-",
+    "5+",
+    "5=",
+    "5-",
+    "6+",
+    "6=",
+    "6-",
+    "7+",
+    "7=",
+    "7-",
+    "8+",
+    "8=",
+    "8-",
+    "9",
+    "10"
+  ],
+  "FacilityCommitted": [
+    "Committed",
+    "UnCommitted"
+  ],
+  "DocumentStatus": [
+    "Approved",
+    "Offered",
+    "Accepted"
+  ],
+  "DocumentClassification": [
+    "Syndicated",
+    "Bilateral"
+  ],
+  "TenorType": [
+    "Day",
+    "Month",
+    "Year",
+    "Date"
+  ],
+  "YesNo": [
+    "Yes",
+    "No"
+  ],
+  "RiskMitigation": [
+    "NA",
+    "Insurer",
+    "Guarantor"
+  ],
+  "RiskType": [
+    "Bank",
+    "Corporate",
+    "Multinational",
+    "Sovereign"
+  ],
+  "LimitType": [
+    "Revolving",
+    "Terminating"
+  ],
+  "ProductClass": [
+    "Class1",
+    "Class2",
+    "Class3"
+  ],
+  "CadLevel": [
+    "Not Applicable",
+    "Corp 0.1",
+    "Corp 0.2",
+    "Corp 0.4",
+    "Corp 0.5",
+    "Corp 0.8",
+    "Corp 1",
+    "Corp 4",
+    "Corp 8",
+    "Corp 15",
+    "Corp 20",
+    "Corp 35",
+    "Corp 60",
+    "Corp 115",
+    "Corp 250",
+    "Corp 500",
+    "Corp 750",
+    "Corp 1000",
+    "Corp 1500",
+    "Corp 2500",
+    "Corp 4000",
+    "CFS 10",
+    "CFS 75",
+    "CFS 140",
+    "CFS 500",
+    "CFS 1000",
+    "CFS 2000",
+    "CFS 2500",
+    "CFS 4000",
+    "CFS 8000",
+    "CFS 15000"
+  ],
+  "CurrencyList": [
+    "AED",
+    "ALL",
+    "ANG",
+    "ARS",
+    "AUD",
+    "BBD",
+    "BDT",
+    "BGN",
+    "BHD",
+    "BMD",
+    "BND",
+    "BRL",
+    "BSD",
+    "BWP",
+    "CAD",
+    "CDF",
+    "CHF",
+    "CLP",
+    "CNY",
+    "COP",
+    "CRC",
+    "CUP",
+    "CZK",
+    "DJF",
+    "DKK",
+    "DOP",
+    "DZD",
+    "ECS",
+    "EEK",
+    "EGP",
+    "ETB",
+    "EUR",
+    "FJD",
+    "GBP",
+    "GHS",
+    "GIP",
+    "GMD",
+    "HKD",
+    "HRK",
+    "HUF",
+    "INR",
+    "IDR",
+    "ILS",
+    "IQD",
+    "IRR",
+    "ISK",
+    "JMD",
+    "JOD",
+    "JPY",
+    "KES",
+    "KHR",
+    "KPW",
+    "KRW",
+    "KWD",
+    "KYD",
+    "KZT",
+    "LAK",
+    "LBP",
+    "LKR",
+    "LRD",
+    "LTL",
+    "LVL",
+    "MAD",
+    "MGA",
+    "MKD",
+    "MMK",
+    "MOP",
+    "MUR",
+    "MVR",
+    "MWK",
+    "MXN",
+    "MYR",
+    "MZN",
+    "NGN",
+    "NOK",
+    "NPR",
+    "NZD",
+    "OMR",
+    "PAB",
+    "PEN",
+    "PGK",
+    "PHP",
+    "PKR",
+    "PLN",
+    "PYG",
+    "QAR",
+    "RON",
+    "RUB",
+    "SAR",
+    "SBD",
+    "SCR",
+    "SEK",
+    "SGD",
+    "SKK",
+    "SLL",
+    "SRD",
+    "SVC",
+    "SYP",
+    "THB",
+    "TND",
+    "TOP",
+    "TRY",
+    "TWD",
+    "TZS",
+    "UAH",
+    "UGX",
+    "USD",
+    "UYU",
+    "VEF",
+    "VND",
+    "VUV",
+    "WST",
+    "XAF",
+    "XOF",
+    "XPF",
+    "YER",
+    "ZAR",
+    "ZMW",
+    "ZWL"
+
+  ],
+  "Industry": [
+    {
+      "key": "A0111",
+      "value": "Nursery Production (Under Cover)"
+    },
+    {
+      "key": "A0112",
+      "value": "Nursery Production (Outdoors)"
+    },
+    {
+      "key": "A0113",
+      "value": "Turf Growing"
+    },
+    {
+      "key": "A0114",
+      "value": "Floriculture Production (Under Cover)"
+    },
+    {
+      "key": "A0115",
+      "value": "Floriculture Production (Outdoors)"
+    },
+    {
+      "key": "A0121",
+      "value": "Mushroom Growing"
+    },
+    {
+      "key": "A0122",
+      "value": "Vegetable Growing (Under Cover)"
+    },
+    {
+      "key": "A0123",
+      "value": "Vegetable Growing (Outdoors)"
+    },
+    {
+      "key": "A0131",
+      "value": "Grape Growing"
+    },
+    {
+      "key": "A0132",
+      "value": "Kiwifruit Growing"
+    },
+    {
+      "key": "A0133",
+      "value": "Berry Fruit Growing"
+    },
+    {
+      "key": "A0134",
+      "value": "Apple and Pear Growing"
+    },
+    {
+      "key": "A0135",
+      "value": "Stone Fruit Growing"
+    },
+    {
+      "key": "A0136",
+      "value": "Citrus Fruit Growing"
+    },
+    {
+      "key": "A0137",
+      "value": "Olive Growing"
+    },
+    {
+      "key": "A0139",
+      "value": "Other Fruit and Tree Nut Growing"
+    },
+    {
+      "key": "A0141",
+      "value": "Sheep Farming (Specialised)"
+    },
+    {
+      "key": "A0142",
+      "value": "Beef Cattle Farming (Specialised)"
+    },
+    {
+      "key": "A0143",
+      "value": "Beef Cattle Feedlots (Specialised)"
+    },
+    {
+      "key": "A0144",
+      "value": "Sheep-Beef Cattle Farming"
+    },
+    {
+      "key": "A0145",
+      "value": "Grain-Sheep or Grain-Beef Cattle Farming"
+    },
+    {
+      "key": "A0146",
+      "value": "Rice Growing"
+    },
+    {
+      "key": "A0149",
+      "value": "Other Grain Growing"
+    },
+    {
+      "key": "A0151",
+      "value": "Sugar Cane Growing"
+    },
+    {
+      "key": "A0152",
+      "value": "Cotton Growing"
+    },
+    {
+      "key": "A0159",
+      "value": "Other Crop Growing n.e.c."
+    },
+    {
+      "key": "A0160",
+      "value": "Dairy Cattle Farming"
+    },
+    {
+      "key": "A0171",
+      "value": "Poultry Farming (Meat)"
+    },
+    {
+      "key": "A0172",
+      "value": "Poultry Farming (Eggs)"
+    },
+    {
+      "key": "A0180",
+      "value": "Deer Farming"
+    },
+    {
+      "key": "A0191",
+      "value": "Horse Farming"
+    },
+    {
+      "key": "A0192",
+      "value": "Pig Farming"
+    },
+    {
+      "key": "A0193",
+      "value": "Beekeeping"
+    },
+    {
+      "key": "A0199",
+      "value": "Other Livestock Farming n.e.c."
+    },
+    {
+      "key": "A0201",
+      "value": "Offshore Longline and Rack Aquaculture"
+    },
+    {
+      "key": "A0202",
+      "value": "Offshore Caged Aquaculture"
+    },
+    {
+      "key": "A0203",
+      "value": "Onshore Aquaculture"
+    },
+    {
+      "key": "A0301",
+      "value": "Forestry"
+    },
+    {
+      "key": "A0302",
+      "value": "Logging"
+    },
+    {
+      "key": "A0411",
+      "value": "Rock Lobster and Crab Potting"
+    },
+    {
+      "key": "A0412",
+      "value": "Prawn Fishing"
+    },
+    {
+      "key": "A0413",
+      "value": "Line Fishing"
+    },
+    {
+      "key": "A0414",
+      "value": "Fish Trawling, Seining and Netting"
+    },
+    {
+      "key": "A0419",
+      "value": "Other Fishing"
+    },
+    {
+      "key": "A0420",
+      "value": "Hunting and Trapping"
+    },
+    {
+      "key": "A0510",
+      "value": "Forestry Support Services"
+    },
+    {
+      "key": "A0521",
+      "value": "Cotton Ginning"
+    },
+    {
+      "key": "A0522",
+      "value": "Shearing Services"
+    },
+    {
+      "key": "A0529",
+      "value": "Other Agriculture and Fishing Support Services"
+    },
+    {
+      "key": "B0600",
+      "value": "Coal Mining"
+    },
+    {
+      "key": "B0700",
+      "value": "Oil and Gas Extraction"
+    },
+    {
+      "key": "B0801",
+      "value": "Iron Ore Mining"
+    },
+    {
+      "key": "B0802",
+      "value": "Bauxite Mining"
+    },
+    {
+      "key": "B0803",
+      "value": "Copper Ore Mining"
+    },
+    {
+      "key": "B0804",
+      "value": "Gold Ore Mining"
+    },
+    {
+      "key": "B0805",
+      "value": "Mineral Sand Mining"
+    },
+    {
+      "key": "B0806",
+      "value": "Nickel Ore Mining"
+    },
+    {
+      "key": "B0807",
+      "value": "Silver-Lead-Zinc Ore Mining"
+    },
+    {
+      "key": "B0809",
+      "value": "Other Metal Ore Mining"
+    },
+    {
+      "key": "B0911",
+      "value": "Gravel and Sand Quarrying"
+    },
+    {
+      "key": "B0919",
+      "value": "Other Construction Material Mining"
+    },
+    {
+      "key": "B0990",
+      "value": "Other Non-Metallic Mineral Mining and Quarrying"
+    },
+    {
+      "key": "B1011",
+      "value": "Petroleum Exploration"
+    },
+    {
+      "key": "B1012",
+      "value": "Mineral Exploration"
+    },
+    {
+      "key": "B1090",
+      "value": "Other Mining Support Services"
+    },
+    {
+      "key": "C1111",
+      "value": "Meat Processing"
+    },
+    {
+      "key": "C1112",
+      "value": "Poultry Processing"
+    },
+    {
+      "key": "C1113",
+      "value": "Cured Meat and Smallgoods Manufacturing"
+    },
+    {
+      "key": "C1120",
+      "value": "Seafood Processing"
+    },
+    {
+      "key": "C1131",
+      "value": "Milk and Cream Processing"
+    },
+    {
+      "key": "C1132",
+      "value": "Ice Cream Manufacturing"
+    },
+    {
+      "key": "C1133",
+      "value": "Cheese and Other Dairy Product Manufacturing"
+    },
+    {
+      "key": "C1140",
+      "value": "Fruit and Vegetable Processing"
+    },
+    {
+      "key": "C1150",
+      "value": "Oil and Fat Manufacturing"
+    },
+    {
+      "key": "C1161",
+      "value": "Grain Mill Product Manufacturing"
+    },
+    {
+      "key": "C1162",
+      "value": "Cereal, Pasta and Baking Mix Manufacturing"
+    },
+    {
+      "key": "C1171",
+      "value": "Bread Manufacturing (Factory based)"
+    },
+    {
+      "key": "C1172",
+      "value": "Cake and Pastry Manufacturing (Factory based)"
+    },
+    {
+      "key": "C1173",
+      "value": "Biscuit Manufacturing (Factory based)"
+    },
+    {
+      "key": "C1174",
+      "value": "Bakery Product Manufacturing (Non-factory based)"
+    },
+    {
+      "key": "C1181",
+      "value": "Sugar Manufacturing"
+    },
+    {
+      "key": "C1182",
+      "value": "Confectionery Manufacturing"
+    },
+    {
+      "key": "C1191",
+      "value": "Potato, Corn and Other Crisp Manufacturing"
+    },
+    {
+      "key": "C1192",
+      "value": "Prepared Animal and Bird Feed Manufacturing"
+    },
+    {
+      "key": "C1199",
+      "value": "Other Food Product Manufacturing n.e.c."
+    },
+    {
+      "key": "C1211",
+      "value": "Soft Drink, Cordial and Syrup Manufacturing"
+    },
+    {
+      "key": "C1212",
+      "value": "Beer Manufacturing"
+    },
+    {
+      "key": "C1213",
+      "value": "Spirit Manufacturing"
+    },
+    {
+      "key": "C1214",
+      "value": "Wine and Other Alcoholic Beverage Manufacturing"
+    },
+    {
+      "key": "C1220",
+      "value": "Cigarette and Tobacco Product Manufacturing"
+    },
+    {
+      "key": "C1311",
+      "value": "Wool Scouring"
+    },
+    {
+      "key": "C1312",
+      "value": "Natural Textile Manufacturing"
+    },
+    {
+      "key": "C1313",
+      "value": "Synthetic Textile Manufacturing"
+    },
+    {
+      "key": "C1320",
+      "value": "Leather Tanning, Fur Dressing and Leather Product Manufacturing"
+    },
+    {
+      "key": "C1331",
+      "value": "Textile Floor Covering Manufacturing"
+    },
+    {
+      "key": "C1332",
+      "value": "Rope, Cordage and Twine Manufacturing"
+    },
+    {
+      "key": "C1333",
+      "value": "Cut and Sewn Textile Product Manufacturing"
+    },
+    {
+      "key": "C1334",
+      "value": "Textile Finishing and Other Textile Product Manufacturing"
+    },
+    {
+      "key": "C1340",
+      "value": "Knitted Product Manufacturing"
+    },
+    {
+      "key": "C1351",
+      "value": "Clothing Manufacturing"
+    },
+    {
+      "key": "C1352",
+      "value": "Footwear Manufacturing"
+    },
+    {
+      "key": "C1411",
+      "value": "Log Sawmilling"
+    },
+    {
+      "key": "C1412",
+      "value": "Wood Chipping"
+    },
+    {
+      "key": "C1413",
+      "value": "Timber Resawing and Dressing"
+    },
+    {
+      "key": "C1491",
+      "value": "Prefabricated Wooden Building Manufacturing"
+    },
+    {
+      "key": "C1492",
+      "value": "Wooden Structural Fitting and Component Manufacturing"
+    },
+    {
+      "key": "C1493",
+      "value": "Veneer and Plywood Manufacturing"
+    },
+    {
+      "key": "C1494",
+      "value": "Reconstituted Wood Product Manufacturing"
+    },
+    {
+      "key": "C1499",
+      "value": "Other Wood Product Manufacturing n.e.c."
+    },
+    {
+      "key": "C1510",
+      "value": "Pulp, Paper and Paperboard Manufacturing"
+    },
+    {
+      "key": "C1521",
+      "value": "Corrugated Paperboard and Paperboard Container Manufacturing"
+    },
+    {
+      "key": "C1522",
+      "value": "Paper Bag Manufacturing"
+    },
+    {
+      "key": "C1523",
+      "value": "Paper Stationery Manufacturing"
+    },
+    {
+      "key": "C1524",
+      "value": "Sanitary Paper Product Manufacturing"
+    },
+    {
+      "key": "C1529",
+      "value": "Other Converted Paper Product Manufacturing"
+    },
+    {
+      "key": "C1611",
+      "value": "Printing"
+    },
+    {
+      "key": "C1612",
+      "value": "Printing Support Services"
+    },
+    {
+      "key": "C1620",
+      "value": "Reproduction of Recorded Media"
+    },
+    {
+      "key": "C1701",
+      "value": "Petroleum Refining and Petroleum Fuel Manufacturing"
+    },
+    {
+      "key": "C1709",
+      "value": "Other Petroleum and Coal Product Manufacturing"
+    },
+    {
+      "key": "C1811",
+      "value": "Industrial Gas Manufacturing"
+    },
+    {
+      "key": "C1812",
+      "value": "Basic Organic Chemical Manufacturing"
+    },
+    {
+      "key": "C1813",
+      "value": "Basic Inorganic Chemical Manufacturing"
+    },
+    {
+      "key": "C1821",
+      "value": "Synthetic Resin and Synthetic Rubber Manufacturing"
+    },
+    {
+      "key": "C1829",
+      "value": "Other Basic Polymer Manufacturing"
+    }
+  ],
+  "Sector": [
+    {
+      "key": "A",
+      "value": "Agriculture, Forestry and Fishing"
+    },
+    {
+      "key": "B",
+      "value": "Mining"
+    },
+    {
+      "key": "C",
+      "value": "Manufacturing"
+    },
+    {
+      "key": "D",
+      "value": "Electricity, Gas, Water and Waste Services"
+    },
+    {
+      "key": "E",
+      "value": "Construction"
+    },
+    {
+      "key": "F",
+      "value": "Wholesale Trade"
+    },
+    {
+      "key": "G",
+      "value": "Retail Trade"
+    },
+    {
+      "key": "H",
+      "value": "Accommodation and Food Services"
+    },
+    {
+      "key": "I",
+      "value": "Transport, Postal and Warehousing"
+    },
+    {
+      "key": "J",
+      "value": "Information Media and Telecommunications"
+    },
+    {
+      "key": "K",
+      "value": "Financial and Insurance Services"
+    },
+    {
+      "key": "L",
+      "value": "Rental, Hiring and Real Estate Services"
+    },
+    {
+      "key": "M",
+      "value": "Professional, Scientific and Technical Services"
+    },
+    {
+      "key": "N",
+      "value": "Administrative and Support Services"
+    },
+    {
+      "key": "O",
+      "value": "Public Administration and Safety"
+    },
+    {
+      "key": "P",
+      "value": "Education and Training"
+    },
+    {
+      "key": "Q",
+      "value": "Health Care and Social Assistance"
+    },
+    {
+      "key": "R",
+      "value": "Arts and Recreation Services"
+    },
+    {
+      "key": "S",
+      "value": "Other Services"
+    }
+  ],
+  "DecisionRationales": [
+    {
+      "key": "Review and Monitoring",
+      "value": "Annual Review"
+    },
+    {
+      "key": "Review and Monitoring",
+      "value": "Risk Grade Review"
+    },
+    {
+      "key": "Review and Monitoring",
+      "value": "Financial/Covenant monitoring"
+    },
+    {
+      "key": "Loans",
+      "value": "New Facility"
+    },
+    {
+      "key": "Loans",
+      "value": "Limit/Tenor change"
+    },
+    {
+      "key": "Bespoke",
+      "value": "Covid"
+    },
+    {
+      "key": "Others",
+      "value": "Other"
+    }
+  ],
+  "AUDExchangeRateTable": [
+    {
+      "CurrencyCode": "AUD",
+      "AUDConversionRate": 1,
+      "AUDValue": 1
+    },
+    {
+      "CurrencyCode": "ARS",
+      "AUDConversionRate": 654.303871,
+      "AUDValue": 0.001528
+    },
+    {
+      "CurrencyCode": "BHD",
+      "AUDConversionRate": 0.245050,
+      "AUDValue": 4.080794
+    },
+    {
+      "CurrencyCode": "BWP",
+      "AUDConversionRate": 8.874741,
+      "AUDValue": 0.112679
+    },
+    {
+      "CurrencyCode": "BRL",
+      "AUDConversionRate": 3.789501,
+      "AUDValue": 0.263887
+    },
+    {
+      "CurrencyCode": "GBP",
+      "AUDConversionRate": 0.517713,
+      "AUDValue": 1.931570
+    },
+    {
+      "CurrencyCode": "BND",
+      "AUDConversionRate": 0.876986,
+      "AUDValue": 1.140269
+    },
+    {
+      "CurrencyCode": "BGN",
+      "AUDConversionRate": 1.217070,
+      "AUDValue": 0.821645
+    },
+    {
+      "CurrencyCode": "CAD",
+      "AUDConversionRate": 0.910474,
+      "AUDValue": 1.098329
+    },
+    {
+      "CurrencyCode": "CLP",
+      "AUDConversionRate": 634.529015,
+      "AUDValue": 0.001576
+    },
+    {
+      "CurrencyCode": "CNY",
+      "AUDConversionRate": 4.722820,
+      "AUDValue": 0.211738
+    },
+    {
+      "CurrencyCode": "COP",
+      "AUDConversionRate": 2860.302186,
+      "AUDValue": 0.000350
+    },
+    {
+      "CurrencyCode": "CZK",
+      "AUDConversionRate": 15.775471,
+      "AUDValue": 0.063390
+    },
+    {
+      "CurrencyCode": "DKK",
+      "AUDConversionRate": 4.641269,
+      "AUDValue": 0.215458
+    },
+    {
+      "CurrencyCode": "AED",
+      "AUDConversionRate": 2.393477,
+      "AUDValue": 0.417802
+    },
+    {
+      "CurrencyCode": "EUR",
+      "AUDConversionRate": 0.622278,
+      "AUDValue": 1.606998
+    },
+    {
+      "CurrencyCode": "HKD",
+      "AUDConversionRate": 5.071666,
+      "AUDValue": 0.197174
+    },
+    {
+      "CurrencyCode": "HUF",
+      "AUDConversionRate": 255.908026,
+      "AUDValue": 0.003908
+    },
+    {
+      "CurrencyCode": "ISK",
+      "AUDConversionRate": 90.922283,
+      "AUDValue": 0.010998
+    },
+    {
+      "CurrencyCode": "INR",
+      "AUDConversionRate": 55.072000,
+      "AUDValue": 0.018158
+    },
+    {
+      "CurrencyCode": "IDR",
+      "AUDConversionRate": 10373.590328,
+      "AUDValue": 0.000096
+    },
+    {
+      "CurrencyCode": "IRR",
+      "AUDConversionRate": 27432.634505,
+      "AUDValue": 0.000036
+    },
+    {
+      "CurrencyCode": "ILS",
+      "AUDConversionRate": 2.422265,
+      "AUDValue": 0.412837
+    },
+    {
+      "CurrencyCode": "JPY",
+      "AUDConversionRate": 100.627786,
+      "AUDValue": 0.009938
+    },
+    {
+      "CurrencyCode": "KZT",
+      "AUDConversionRate": 323.327789,
+      "AUDValue": 0.003093
+    },
+    {
+      "CurrencyCode": "KWD",
+      "AUDConversionRate": 0.200531,
+      "AUDValue": 4.986767
+    },
+    {
+      "CurrencyCode": "LYD",
+      "AUDConversionRate": 3.188692,
+      "AUDValue": 0.313608
+    },
+    {
+      "CurrencyCode": "MYR",
+      "AUDConversionRate": 2.912787,
+      "AUDValue": 0.343314
+    },
+    {
+      "CurrencyCode": "MUR",
+      "AUDConversionRate": 30.247865,
+      "AUDValue": 0.033060
+    },
+    {
+      "CurrencyCode": "MXN",
+      "AUDConversionRate": 13.314498,
+      "AUDValue": 0.075106
+    },
+    {
+      "CurrencyCode": "NPR",
+      "AUDConversionRate": 88.156504,
+      "AUDValue": 0.011343
+    },
+    {
+      "CurrencyCode": "NZD",
+      "AUDConversionRate": 1.115986,
+      "AUDValue": 0.896069
+    },
+    {
+      "CurrencyCode": "NOK",
+      "AUDConversionRate": 7.210504,
+      "AUDValue": 0.138687
+    },
+    {
+      "CurrencyCode": "OMR",
+      "AUDConversionRate": 0.250912,
+      "AUDValue": 3.985455
+    },
+    {
+      "CurrencyCode": "PKR",
+      "AUDConversionRate": 181.772066,
+      "AUDValue": 0.005501
+    },
+    {
+      "CurrencyCode": "PHP",
+      "AUDConversionRate": 38.417706,
+      "AUDValue": 0.026030
+    },
+    {
+      "CurrencyCode": "PLN",
+      "AUDConversionRate": 2.702963,
+      "AUDValue": 0.369964
+    },
+    {
+      "CurrencyCode": "QAR",
+      "AUDConversionRate": 2.372296,
+      "AUDValue": 0.421533
+    },
+    {
+      "CurrencyCode": "RON",
+      "AUDConversionRate": 3.096825,
+      "AUDValue": 0.322911
+    },
+    {
+      "CurrencyCode": "RUB",
+      "AUDConversionRate": 66.017258,
+      "AUDValue": 0.015148
+    },
+    {
+      "CurrencyCode": "SAR",
+      "AUDConversionRate": 2.443986,
+      "AUDValue": 0.409168
+    },
+    {
+      "CurrencyCode": "SGD",
+      "AUDConversionRate": 0.876986,
+      "AUDValue": 1.140269
+    },
+    {
+      "CurrencyCode": "ZAR",
+      "AUDConversionRate": 11.785111,
+      "AUDValue": 0.084853
+    },
+    {
+      "CurrencyCode": "KRW",
+      "AUDConversionRate": 912.726614,
+      "AUDValue": 0.001096
+    },
+    {
+      "CurrencyCode": "LKR",
+      "AUDConversionRate": 189.673267,
+      "AUDValue": 0.005272
+    },
+    {
+      "CurrencyCode": "SEK",
+      "AUDConversionRate": 7.209609,
+      "AUDValue": 0.138704
+    },
+    {
+      "CurrencyCode": "CHF",
+      "AUDConversionRate": 0.577695,
+      "AUDValue": 1.731017
+    },
+    {
+      "CurrencyCode": "TWD",
+      "AUDConversionRate": 21.218394,
+      "AUDValue": 0.047129
+    },
+    {
+      "CurrencyCode": "THB",
+      "AUDConversionRate": 22.660349,
+      "AUDValue": 0.044130
+    },
+    {
+      "CurrencyCode": "TTD",
+      "AUDConversionRate": 4.421643,
+      "AUDValue": 0.226160
+    },
+    {
+      "CurrencyCode": "TRY",
+      "AUDConversionRate": 22.511516,
+      "AUDValue": 0.044422
+    },
+    {
+      "CurrencyCode": "USD",
+      "AUDConversionRate": 0.651730,
+      "AUDValue": 1.534379
+    },
+    {
+      "CurrencyCode": "VES",
+      "AUDConversionRate": 3015522.154798,
+      "AUDValue": 0.000000
+    }
+  ]
+
+}

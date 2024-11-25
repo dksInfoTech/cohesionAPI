@@ -1,0 +1,100 @@
+name: Deploy DEMO Product API to EKS
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_id:
+        description: 'Image ID for deployment (Will default to latest dev image)'
+        required: false
+        default: 'dev'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Log in to Amazon ECR
+      run: |
+        aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY }}
+
+    - name: Set selected or default image ID
+      id: set_image_id
+      run: |
+        IMAGE_ID="${{ github.event.inputs.image_id }}"
+        if [ -z "$IMAGE_ID" ]; then
+          IMAGE_ID="dev"
+        fi
+
+        echo "Selected Image ID: $IMAGE_ID"
+
+        # Retrieve the image digest for the given tag
+        IMAGE_DIGEST=$(aws ecr describe-images --repository-name ${{ secrets.ECR_REPOSITORY_SHORT_NAME }} --image-ids imageTag=$IMAGE_ID --region ${{ secrets.AWS_REGION }} --query 'imageDetails[0].imageDigest' --output text)
+
+        if [ "$IMAGE_DIGEST" == "None" ] || [ -z "$IMAGE_DIGEST" ]; then
+          echo "Image with tag '$IMAGE_ID' not found in the repository."
+          exit 1
+        fi
+
+        echo "Image Digest: $IMAGE_DIGEST"
+
+        # Find all tags associated with this digest and filter out the 'dev' tag
+        OTHER_TAG=$(aws ecr describe-images --repository-name ${{ secrets.ECR_REPOSITORY_SHORT_NAME }} --image-ids imageDigest=$IMAGE_DIGEST --region ${{ secrets.AWS_REGION }} --query 'imageDetails[0].imageTags' --output json | jq -r '.[] | select(. != "dev")')
+
+        if [ -z "$OTHER_TAG" ]; then
+          echo "No other tag found for the image digest $IMAGE_DIGEST."
+          exit 1
+        fi
+
+        # echo "Using tag: $OTHER_TAG for IMAGE_TAG"
+        echo "IMAGE_TAG=$OTHER_TAG" >> $GITHUB_ENV
+
+
+    - name: Update Kubernetes deployment
+      env:
+        ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
+        IMAGE_TAG: ${{ env.IMAGE_TAG }}
+        KUBERNETES_NAMESPACE: ${{ secrets.KUBERNETES_DEMO_NAMESPACE }}
+      run: |
+        aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name ${{ secrets.EKS_DEMO_CLUSTER_NAME }}
+        echo "Deploying image ${ECR_REPOSITORY}:${IMAGE_TAG} to Kubernetes..."
+        kubectl --request-timeout=60s set image deployment/product-api product-api=${ECR_REPOSITORY}:${IMAGE_TAG} -n ${KUBERNETES_NAMESPACE}
+
+    - name: Tag Env Vars
+      env:
+        KUBERNETES_NAMESPACE: ${{ secrets.KUBERNETES_DEMO_NAMESPACE }}
+      run: |
+        kubectl set env deployment/product-api IMAGE_TAG=${{ env.IMAGE_TAG }} -n ${KUBERNETES_NAMESPACE}
+
+    - name: Tag image as "demo" in ECR
+      run: |
+        echo "Tagging the existing image as 'demo'..."
+
+        # Retrieve the image digest of the existing image tag
+        IMAGE_DIGEST=$(aws ecr describe-images --repository-name ${{ secrets.ECR_REPOSITORY_SHORT_NAME }} --image-ids imageTag=${{ env.IMAGE_TAG }} --region ${{ secrets.AWS_REGION }} --query 'imageDetails[0].imageDigest' --output text)
+
+        if [ "$IMAGE_DIGEST" == "None" ] || [ -z "$IMAGE_DIGEST" ]; then
+          echo "Image with tag '${{ env.IMAGE_TAG }}' not found in the repository."
+          exit 1
+        fi
+
+        # Fetch the image manifest
+        IMAGE_MANIFEST=$(aws ecr batch-get-image --repository-name ${{ secrets.ECR_REPOSITORY_SHORT_NAME }} --image-ids imageDigest=$IMAGE_DIGEST --region ${{ secrets.AWS_REGION }} --query 'images[0].imageManifest' --output text)
+
+        if [ "$IMAGE_MANIFEST" == "None" ] || [ -z "$IMAGE_MANIFEST" ]; then
+          echo "Image manifest for digest $IMAGE_DIGEST not found."
+          exit 1
+        fi
+
+        # Use the existing digest to tag the image as 'demo'
+        aws ecr put-image --repository-name ${{ secrets.ECR_REPOSITORY_SHORT_NAME }} --image-tag demo --image-manifest "$IMAGE_MANIFEST" --region ${{ secrets.AWS_REGION }}
+

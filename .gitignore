@@ -1,0 +1,13 @@
+*.cache
+*.log
+bin/
+obj/
+log/
+.vs/
+.DS_Store
+TestResults*/
+Debug*/
+*.user
+linux
+bundle/
+publish/

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-api
+  namespace: product-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-api
+  template:
+    metadata:
+      labels:
+        app: product-api
+    spec:
+      containers:
+      - name: product-api
+        image: 992382546166.dkr.ecr.ap-southeast-2.amazonaws.com/argiro/productapi:dev
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "2"
+            memory: "4Gi"
+          limits:
+            cpu: "2"
+            memory: "4Gi"
+        volumeMounts:
+            - name: efs-product-demo
+              mountPath: /mnt/product
+            - name: apilogs
+              mountPath: /app/logs/api
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Demo"
+      volumes:
+        - name: apilogs
+          hostPath:
+            path: /app/logs/api
+            type: DirectoryOrCreate
+        - name: efs-product-demo
+          persistentVolumeClaim:
+            claimName: efs-product-demo

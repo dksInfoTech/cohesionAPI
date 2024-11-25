@@ -1,0 +1,63 @@
+name: Deploy DEV Product API to EKS
+
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Log in to Amazon ECR
+      run: |
+        aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY }}
+
+    - name: Build the Docker image
+      run: |
+        IMAGE_TAG=$(echo $GITHUB_SHA | cut -c1-7)  # Shorten the Git SHA as the image tag
+        docker build -t ${{ secrets.ECR_REPOSITORY }}:$IMAGE_TAG -f Product.Web/Dockerfile .
+    
+    - name: Push Docker image to Amazon ECR
+      run: |
+        IMAGE_TAG=$(echo $GITHUB_SHA | cut -c1-7)
+
+        # Tag the image with 'dev'
+        docker tag ${{ secrets.ECR_REPOSITORY }}:$IMAGE_TAG ${{ secrets.ECR_REPOSITORY }}:dev
+
+        docker push ${{ secrets.ECR_REPOSITORY }}:$IMAGE_TAG
+        docker push ${{ secrets.ECR_REPOSITORY }}:dev
+
+    - name: Update kubeconfig for EKS
+      run: |
+        aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name ${{ secrets.EKS_CLUSTER_NAME }}
+
+    - name: Set Image Tag
+      id: set_image_tag
+      run: echo "IMAGE_TAG=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
+
+    - name: Tag Env Vars
+      run: |
+        kubectl set env deployment/product-api IMAGE_TAG=${{ env.IMAGE_TAG }} -n ${{ secrets.KUBERNETES_NAMESPACE }}
+
+    - name: Update Kubernetes deployment
+      env:
+        IMAGE_TAG: ${{ secrets.ECR_REPOSITORY }}:$(echo $GITHUB_SHA | cut -c1-7)
+      run: |
+        aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name ${{ secrets.EKS_CLUSTER_NAME }}
+
+         # Define IMAGE_TAG here directly
+        IMAGE_TAG=${{ secrets.ECR_REPOSITORY }}:$(echo $GITHUB_SHA | cut -c1-7)
+        
+        # Update the Kubernetes deployment to use the new image
+        kubectl --request-timeout=60s set image deployment/product-api product-api=$IMAGE_TAG -n ${{ secrets.KUBERNETES_NAMESPACE }}

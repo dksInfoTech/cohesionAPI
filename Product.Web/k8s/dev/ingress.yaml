@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: product-api-ingress
+  namespace: product
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-southeast-2:992382546166:certificate/cb9d592f-7550-4e4d-8f34-68ff9461140d"
+    alb.ingress.kubernetes.io/ssl-redirect: "443"
+    alb.ingress.kubernetes.io/backend-protocol: HTTP
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/subnets: "subnet-0ced7d1623af9a8c6,subnet-04af0cbc8070156c8,subnet-09d0e15c1a07c29b5"
+spec:
+  ingressClassName: alb
+  rules:
+    - host: devapi.argirotest.com.au
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: product-api-service
+                port:
+                  number: 80
