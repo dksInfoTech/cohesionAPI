@@ -118,16 +118,16 @@ public class Startup
         });
 
         // Register bloomberg auth service as a singleton
-        services.AddSingleton<IIntegrationAuthService, BloombergAuthService>();
-        services.AddSingleton<IIntegrationService, IntegrationService>();
-        services.AddSingleton<BloombergDataService>(sp =>
-        {
-            return new BloombergDataService(sp.GetRequiredService<IIntegrationService>(), sp.GetRequiredService<IntegrationConfig>(), dbConnectionString);
-        });
+        //services.AddSingleton<IIntegrationAuthService, BloombergAuthService>();
+        //services.AddSingleton<IIntegrationService, IntegrationService>();
+        //services.AddSingleton<BloombergDataService>(sp =>
+        //{
+        //    return new BloombergDataService(sp.GetRequiredService<IIntegrationService>(), sp.GetRequiredService<IntegrationConfig>(), dbConnectionString);
+        //});
         //services.AddSingleton<BloombergDataService, BloombergDataService>();
 
-        services.AddSingleton<ZeroMqPubService>();
-        services.AddHostedService<ZeroMqSubService>();
+        //services.AddSingleton<ZeroMqPubService>();
+        //services.AddHostedService<ZeroMqSubService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
